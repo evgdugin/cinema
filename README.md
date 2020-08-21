@@ -1,4 +1,4 @@
 # map
-[](!map/1.png)
+![](!map/1.png)
 
 # info
