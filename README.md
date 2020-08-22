@@ -92,6 +92,7 @@ MOVIE_UPDATED_AT
 
 ## SQL
 
+``` sql
 create table TABLE_SERVICE_MOVIE (
 
 	MOVIE_ID INT,
@@ -102,8 +103,10 @@ create table TABLE_SERVICE_MOVIE (
 	MOVIE_VISIBILITY VARCHAR(50),
 	MOVIE_CREATED_AT DATE,
 	MOVIE_UPDATED_AT DATE
-
 ); 
+```
+
+``` s
 insert into TABLE_SERVICE_MOVIE (
 
 		MOVIE_ID,
@@ -115,7 +118,9 @@ insert into TABLE_SERVICE_MOVIE (
 		MOVIE_CREATED_AT,
 		MOVIE_UPDATED_AT
 	)
+```
 
+```s
 values (
 
 		1,
@@ -127,6 +132,7 @@ values (
 		'11/5/2019',
 		'8/9/2020'
 	);
+```
 
 ![db_movie](png/db_movie.png)
 
