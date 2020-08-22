@@ -54,40 +54,79 @@
 
 ## База данных movie
 
-название базы данных MySQL
+## название базы данных MySQL
 
-* DB_SERVICE_MOVIE
+DB_SERVICE_MOVIE
 
 Содержит:
+---
 
-* MOVIE_TITLE
+## id 
 
-название фильма
+MOVIE_ID
 
-* MOVIE_ID
+## название фильма
 
-id 
+MOVIE_TITLE
 
-* MOVIE_CATEGORY
+## жанр 
 
-жанр 
+MOVIE_CATEGORY
 
-* MOVIE_RELEASE_DATE
+## год выпуска
 
-год выпуска
+MOVIE_RELEASE_DATE
 
-* MOVIE_MPA
+## возрастной рейтинг NOTSET, P, PG, R
 
-возрастной рейтинг NOTSET, P, PG, R
+MOVIE_MPA
 
-* MOVIE_VISIBILITY
+## статус фильма - видимость фильма
 
-статус фильма - видимость фильма
+MOVIE_VISIBILITY
 
-* дополнительно
+## дополнительно
 
 MOVIE_CREATED_AT
 MOVIE_UPDATED_AT
+
+## SQL
+
+create table TABLE_SERVICE_MOVIE (
+
+	MOVIE_ID INT,
+	MOVIE_TITLE VARCHAR(50),
+	MOVIE_CATEGORY VARCHAR(50),
+	MOVIE_RELEASE_DATE DATE,
+	MOVIE_MPA VARCHAR(50),
+	MOVIE_VISIBILITY VARCHAR(50),
+	MOVIE_CREATED_AT DATE,
+	MOVIE_UPDATED_AT DATE
+
+); 
+insert into TABLE_SERVICE_MOVIE (
+
+		MOVIE_ID,
+		MOVIE_TITLE,
+		MOVIE_CATEGORY,
+		MOVIE_RELEASE_DATE,
+		MOVIE_MPA,
+		MOVIE_VISIBILITY,
+		MOVIE_CREATED_AT,
+		MOVIE_UPDATED_AT
+	)
+
+values (
+
+		1,
+		'Back to the USSR - takaisin Ryssiin',
+		'Comedy|Drama',
+		'7/15/2020',
+		'tristique.txt',
+		'Duobam',
+		'11/5/2019',
+		'8/9/2020'
+	);
 
 ![db_movie](png/db_movie.png)
 
