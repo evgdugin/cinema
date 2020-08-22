@@ -1,4 +1,6 @@
 github.com/azomio/courses v0.0.0-20200408104906-7fdc69adaa6d h1:CtEI/Z9NpWg6LTf5Z3DwRfZEefVjAJaWjFVhSQpqH8s=
 github.com/azomio/courses v0.0.0-20200408104906-7fdc69adaa6d/go.mod h1:6T4jdBSzU2PbBhZZAOUkj9cBRjvzOioHJwmI4eZuX1g=
+github.com/geekbrains-gomicrosevices/lesson2 v0.0.0-20200505114601-b06be32ee105 h1:KuVbUYMX71X/pAg7jWfrc6xn6ErXAndefK3mhK4bpFc=
+github.com/geekbrains-gomicrosevices/lesson2 v0.0.0-20200505114601-b06be32ee105/go.mod h1:IkjYy7BKXhDPeoKKDZpqdLjGlElueMbtZVEhJ8p9s4I=
 github.com/gorilla/mux v1.7.4 h1:VuZ8uybHlWmqV03+zRzdwKL4tUnIp1MAQtp1mIFE1bc=
 github.com/gorilla/mux v1.7.4/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
