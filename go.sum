@@ -1,0 +1,4 @@
+github.com/azomio/courses v0.0.0-20200408104906-7fdc69adaa6d h1:CtEI/Z9NpWg6LTf5Z3DwRfZEefVjAJaWjFVhSQpqH8s=
+github.com/azomio/courses v0.0.0-20200408104906-7fdc69adaa6d/go.mod h1:6T4jdBSzU2PbBhZZAOUkj9cBRjvzOioHJwmI4eZuX1g=
+github.com/gorilla/mux v1.7.4 h1:VuZ8uybHlWmqV03+zRzdwKL4tUnIp1MAQtp1mIFE1bc=
+github.com/gorilla/mux v1.7.4/go.mod h1:DVbg23sWSpFRCP0SfiEN6jmj59UnW/n46BH5rLB71So=
