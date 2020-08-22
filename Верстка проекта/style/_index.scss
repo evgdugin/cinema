@@ -1,0 +1,42 @@
+// Отдел с фильмами на центральной странице кинотеатра
+.section-films {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.film {
+    width: 215px;
+    height: 309px;
+    background-color: #e70202;
+    cursor: pointer;
+    background-image: url(/img/video-picture.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.block-films {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-film {
+    background-color: #3f51b5c2;
+    color: white;
+    margin-top: auto;
+    padding: 12px;
+    font-weight: inherit;
+}
+
+// Общее на центральной странице
+.name-product {
+    margin: 20px 0;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+h3 {
+    color: darkgray;
+}

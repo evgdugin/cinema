@@ -1,8 +1,20 @@
-# map
-![](_/1.png)
+# index
+![index](png/index.png)
 
-# info
-![](_/2.png)
+# signup
+![signup](png/signup.png)
+
+# signin
+![signin](png/signin.png)
+
+# profile
+![profile](png/profile.png)
+
+# watch
+![watch](png/watch.png)
+
+# payment
+![payment](png/payment.png)
 ---
 # Дополнения
 ## Возможно требуется добавить сервисы:

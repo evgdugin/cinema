@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e4e4e4;
+    --header-color: #3f51b5;
+    --footer-color: #eeeeee;
+    font-family: iviSans, Arial, Helvetica, Helvetica Neue, FreeSans, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+// Основной контейнер
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+// Верхняя панель управления
+header {
+    width: 100%;
+    height: 60px;
+    background-color: var(--header-color);
+    display: flex;
+    justify-content: start;
+    position: fixed;
+}
+
+// Контейнер с материалами
+.content {
+    flex-grow: 1; // Занимает 100% места свободного
+    padding-top: 60px; // Из-за того, что верхняя панель 60px и оно фиксированная
+}
+
+
+// Логотип в верхней панели
+.logo {
+    background-color: black;
+    color: white;
+    width: 366px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 32px;
+    display: grid;
+    align-items: center;
+}
+
+// Навигация в основной верхней панели
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 32px;
+    align-items: center;
+}
+
+// Блок из группы ссылок в верхней панели
+.link-items {
+    list-style: none;
+    display: inherit;
+}
+
+// Ссылка в блоке из группы ссылок в верхней панели
+.link {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    padding-right: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+// Контейнер для иконки (не зарегестрированного пользователя)
+.user-badge__icon {
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 32px;
+    text-align: center;
+    display: grid;
+    align-content: center;
+    place-content: center;
+}
+
+.top-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-badge {
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+// Иконка картинка пользователя (не зарегестрированного)
+.user-ico {
+    width: 32px;
+}
+
+
+
+// Основной нижний контейнер
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: var(--footer-color);
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+// Внутренний нижний контейнер
+.footer-cinema {
+    display: contents;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    place-items: center;
+}
+
+// Ссылка на тех поддержку в нижнем контейнере
+.feedback-link {
+    text-decoration: none;
+    color: #616161;
+    font-weight: bold;
+}
+
+.btn-pod {
+    background-color: #E91E63;
+    color: white;
+    padding: 10px;
+    margin-right: 16px;
+    border: 0px;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+}
+.sign{
+    width: 230px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    font-size: 25px;
+}
