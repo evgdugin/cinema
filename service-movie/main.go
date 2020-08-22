@@ -4,14 +4,15 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+	"strconv"
 )
 
-const Addr = ":8081"
+const Port = 8081
 
 func main() {
 	http.HandleFunc("/movies", movieListHandler)
-	log.Printf("Starting on port %s", Addr)
-	log.Fatal(http.ListenAndServe(Addr, nil))
+	log.Printf("Starting on port %d", Port)
+	log.Fatal(http.ListenAndServe(":"+strconv.Itoa(Port), nil))
 }
 
 type Movie struct {
