@@ -120,17 +120,17 @@ insert into TABLE_SERVICE_MOVIE (
 	)
 ```
 
-```s
+``` s
 values (
 
 		1,
-		'Back to the USSR - takaisin Ryssiin',
-		'Comedy|Drama',
-		'7/15/2020',
-		'tristique.txt',
-		'Duobam',
-		'11/5/2019',
-		'8/9/2020'
+		'Бойцовский клуб',
+		'thriller',
+		'20/08/2020',
+		'PG',
+		'NOTSET',
+		'20/08/2020',
+		'20/08/2020'
 	);
 ```
 
