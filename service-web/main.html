@@ -1,32 +1,25 @@
 {{ define "title" }} Список фильмов {{ end }}
 {{ define "content" }}
-	{{if .Movies}}
-		<table class="pure-table">
-	    <thead>
-	        <tr>
-	            <th>#</th>
-	            <th>Постер</th>
-	            <th>Название</th>
-	        </tr>
-		</thead>
-
-	    <tbody>
-			{{range .Movies}}
-		        <tr>
-		            <td>{{.ID}}</td>
-		            <td><img src="{{.Poster}}"></td>
-		            <td>
-		            	{{if and .IsPaid (not $.User.IsPaid) }}
-		            		{{.Name}} (платный)
-		            	{{ else }}
-		            		<a href="/movie/{{.ID}}">{{.Name}}</a>
-		            	{{end}}
-		            </td>
-		        </tr>
-			{{end}}
-		</tbody>
-		</table>
-	{{else}}
-		Не удалось загрузить список
+{{if .Movies}}
+<!--  -->
+<div class="movie-card">
+	{{range .Movies}}
+	<div class="card" style="width: 18rem;">
+		<img class="card-img-top" src="{{.Poster}}" alt="Card image cap">
+		<div class="card-body">
+			<h3>{{.ID}}</h3>
+			<h5 class="card-title"> {{if and .IsPaid (not $.User.IsPaid) }}
+				{{.Name}} (платный)
+				{{ else }}
+				<a href="/movie/{{.ID}}">{{.Name}}</a>
+				{{end}}</h5>
+		</div>
+	</div>
 	{{end}}
+</div>
+<!--  -->
+{{else}}
+
+<h3 style="color: red; position: relative; padding-top: 100px;">Не удалось загрузить список</h3>
+{{end}}
 {{ end }}

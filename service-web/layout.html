@@ -1,28 +1,128 @@
 {{ block "layout" .}}
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
-	<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css">
-	<title>{{ template "title" }}</title>
+    <title>{{ template "title" }}</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css">
+
 </head>
+<style>
+    body {
+        --header-color: #525671;
+        font-family: iviSans, Arial, Helvetica, Helvetica Neue, FreeSans, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background-color: currentColor;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+
+    header {
+        width: 100%;
+        height: 60px;
+        background-color: var(--header-color);
+        display: flex;
+        justify-content: start;
+    }
+
+
+    .content {
+        flex-grow: 1;
+    }
+
+    footer {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+        background-color: #f8f9fa !important;
+    }
+
+    .subscription {
+        background-color: #E91E63;
+        padding: 11px;
+        padding-left: 35px;
+        padding-right: 35px;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+
+    }
+
+    .movie-card {
+        margin: 0 auto;
+        padding: 64px 32px;
+        display: grid;
+        grid-gap: 32px;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
+    }
+</style>
+
 <body>
-	<div class="pure-menu pure-menu-horizontal">
-	    <ul class="pure-menu-list">
-	        <li class="pure-menu-item"><a href="/" class="pure-menu-link">Фильмы</a></li>
-	        <li class="pure-menu-item">
-	        	{{if eq .User.ID 0 }}
-	        		Вы не залогинены
-	        	{{ else }}
-	        		Привет, {{.User.Name}}!
-	        		{{if not .User.IsPaid}}
-	        			<a href="{{.PayURL}}">Оформить подписку</a>
-	        		{{end}}
-	        	{{end}}
-	        </li>
-	    </ul>
-	</div>
-	{{ template "content" .}}
-</table>
+    <div class="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light"
+                style="width: 100%;">
+                <a class="navbar-brand text-white" href="#">Онлайн кинотеатр</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/">Фильмы</a>
+                        </li>
+                    </ul>
+                    <span class="navbar-text text-white">
+                        {{if not .User.IsPaid}}
+                        <a class="subscription" href="{{.PayURL}}" style="color: white;">Оформить подписку</a>
+                        {{end}}
+                        {{if eq .User.ID 0 }}
+                        Не авторизованный пользователь
+                        {{ else }}
+                        Привет, {{.User.Name}}!
+
+                        {{end}}
+                    </span>
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+            {{ template "content" .}}
+        </div>
+        <footer>
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="#">Служба технической поддержки</a>
+            </nav>
+        </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
 {{ end }}
